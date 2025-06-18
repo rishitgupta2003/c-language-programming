@@ -11,10 +11,6 @@ int board[3][3] = {
 
 int main(int argc, char *argv[])
 {
-
-    _Bool p1Status = 0;
-    _Bool p2Status = 0;
-
     startGame();
 }
 
@@ -39,10 +35,8 @@ void startGame()
     while (winStatus == 0 && cntBlock <= 9)
     {
         int blockNum;
-        
-
-        printf("\n%d\n", cntBlock);
-        printf("\n%d\n", flag);
+        char move = flag == 1 ? 'X' : 'O';
+        printf("\n%c's Move\n", move);
         printf("Enter Block Number = ");
         scanf("%d", &blockNum);
 
@@ -157,7 +151,12 @@ void startGame()
                 continue;
             }
             break;
+
+        default:
+            printf("\nEnter a Valid Number\n");
+            continue;
         }
+            
 
         flag = flag == 1 ? 0 : 1;
 
@@ -169,7 +168,7 @@ void startGame()
 void printGrid()
 {
 
-    printf("____________________________________________________\n");
+    printf("_________________________________________________\n\n");
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
@@ -190,7 +189,7 @@ void printGrid()
 
             printf("|\t%c\t|", ch);
         }
-        printf("\n____________________________________________________\n");
+        printf("\n_________________________________________________\n\n");
     }
 }
 
