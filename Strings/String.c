@@ -3,9 +3,9 @@
 #include<string.h>
 #define MAX_SIZE 1000
 
-int stringLength(char str[]);
-bool stringEquals(char str1[], char str2[]);
-void stringConcat(char str1[], char str2[], char str3[]);
+int stringLength(const char str[]);
+bool stringEquals(const char str1[], const char str2[]);
+void stringConcat(const char str1[], const char str2[], char str3[]);
 
 
 int main(int argc, char *argv[]){
@@ -30,14 +30,14 @@ int main(int argc, char *argv[]){
     printf("After concatenation -> %s\n", str3);
 }
 
-int stringLength(char str[]){
+int stringLength(const char str[]){
     unsigned int len = 0;
     while(str[len++] != '\0'){}
     return len - 1;
 }
 
 
-bool stringEquals(char str1[], char str2[]){
+bool stringEquals(const char str1[], const char str2[]){
     int i = 0;
     while(str1[i] != '\0' && str2[i] != '\0'){
         if(str1[i] != str2[i]) return false;
@@ -47,7 +47,7 @@ bool stringEquals(char str1[], char str2[]){
 }
 
 
-void stringConcat(char str1[], char str2[], char str3[]){
+void stringConcat(const char str1[], const char str2[], char str3[]){
     int i = 0, j = 0;
     
     while(str1[i] != '\0'){
