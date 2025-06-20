@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdbool.h>
 #include<string.h>
+#include<ctype.h> //For toupper,tolower functions
 #define MAX_SIZE 1000
 
 int stringLength(const char str[]);
@@ -12,54 +13,97 @@ void sortStrings(char arr[][MAX_SIZE], int size);
 int main(int argc, char *argv[]){
     printf("\t\t\tStrings\t\t\t\n");
     
-    char str[MAX_SIZE];
-    strcpy(str, argv[1]);
-    char str2[MAX_SIZE];
-    strcpy(str2, argv[2]);
+    // char str[MAX_SIZE];
+    // strcpy(str, argv[1]);
+    // char str2[MAX_SIZE];
+    // strcpy(str2, argv[2]);
 
-    unsigned int len = stringLength(str);
-    unsigned int len2 = stringLength(str2);
+    // unsigned int len = stringLength(str);
+    // unsigned int len2 = stringLength(str2);
 
-    printf("Length of %s -> %d\n", str, len);
-    printf("Length of %s -> %d\n", str2, len2);
+    // printf("Length of %s -> %d\n", str, len);
+    // printf("Length of %s -> %d\n", str2, len2);
 
-    printf("Are the 2 Strings Equal -> %d\n", stringEquals(str, str2));
+    // printf("Are the 2 Strings Equal -> %d\n", stringEquals(str, str2));
 
-    char str3[MAX_SIZE];
-    stringConcat(str, str2, str3);
+    // char str3[MAX_SIZE];
+    // stringConcat(str, str2, str3);
 
-    printf("After concatenation -> %s\n", str3);
+    // printf("After concatenation -> %s\n", str3);
 
-    char toRev[MAX_SIZE];
-    char result[MAX_SIZE];
+    // char toRev[MAX_SIZE];
+    // char result[MAX_SIZE];
 
-    printf("Enter String to reverse -> ");
-    scanf("%s", toRev);
-    stringReverse(toRev, result);
+    // printf("Enter String to reverse -> ");
+    // scanf("%s", toRev);
+    // stringReverse(toRev, result);
 
-    printf("Orignal String -> %s\nReversed String -> %s\n", toRev, result);
+    // printf("Orignal String -> %s\nReversed String -> %s\n", toRev, result);
     
-    unsigned int n;
-    printf("Enter Number of Strings you need -> ");
-    scanf("%d", &n);
+    // unsigned int n;
+    // printf("Enter Number of Strings you need -> ");
+    // scanf("%d", &n);
     
-    char strings[n][MAX_SIZE];
-    for(int i = 0; i < n; i++){
-        printf("Enter String %d -> ", i+1);
-        scanf("%s", strings[i]);
+    // char strings[n][MAX_SIZE];
+    // for(int i = 0; i < n; i++){
+    //     printf("Enter String %d -> ", i+1);
+    //     scanf("%s", strings[i]);
+    // }
+
+    // printf("\nBefore Sorting");
+    // for(int i = 0; i < n; i++){
+    //     printf("String %d = %s\n", i+1, strings[i]);
+    // }
+
+    // sortStrings(strings, n);
+    // printf("\nAfter Sorting\n");
+
+    // for(int i = 0; i < n; i++){
+    //     printf("String %d = %s\n", i+1, strings[i]);
+    // }
+
+    // char x[MAX_SIZE];
+    // char toFind;
+
+    // printf("Enter the String -> ");
+    // scanf("%s", x);
+
+    // printf("Enter the Character to Find -> ");
+    // scanf(" %c", &toFind);
+
+    // char *charFound = strchr(x, toFind);
+
+    // printf("Found \"%c\" at %p\n", toFind, charFound);
+
+    // char word[] = "The,Quick,Brown,Fox,Jumps,Over,The,Lazy,Dog";
+    // char delimiter[] = ",";
+    // char *token = NULL;
+    // token = strtok(word, delimiter);
+
+    // while(token != NULL){
+    //     printf("%s\n", token);
+    //     token = strtok(NULL, delimiter);
+    // }
+
+
+    char text[100];
+    char substring[50];
+
+    printf("Enter Text -> ");
+    scanf("%s", text);
+
+    printf("Enter Substring -> ");
+    scanf("%s", substring);
+
+    for(int i = 0; i < strlen(text); i++){
+        text[i] = toupper(text[i]);
     }
 
-    for(int i = 0; i < n; i++){
-        printf("String %d = %s\n", i+1, strings[i]);
+    for(int i = 0; i < strlen(substring); i++){
+        substring[i] = toupper(substring[i]);
     }
 
-    sortStrings(strings, n);
-    printf("\nAfter Sorting\n");
-
-    for(int i = 0; i < n; i++){
-        printf("String %d = %s\n", i+1, strings[i]);
-    }
-
+    printf("String %s %s found in %s", substring, (strstr(text, substring) != NULL ? "was" : "was not"), text);
     
 }
 
