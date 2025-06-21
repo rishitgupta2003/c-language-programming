@@ -10,6 +10,7 @@
 5. Enums
 6. Arrays
 7. Strings
+8. Pointers
 ~~~
 
 ...and many more to come as I understand them and do practice of those topics.
