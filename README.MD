@@ -12,6 +12,7 @@
 7. Strings
 8. Pointers
 9. Dynamic Memory Allocation
+10. Structures
 ~~~
 
 ```
