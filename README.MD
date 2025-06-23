@@ -11,6 +11,7 @@
 6. Arrays
 7. Strings
 8. Pointers
+9. Dynamic Memory Allocation
 ~~~
 
 ```
