@@ -7,7 +7,7 @@ CFLAGS = -Wall -Wextra -std=c11
 # Directories
 SRC_DIR = Practice
 OBJ_DIR = build
-BIN = run
+BIN = run.o
 
 # Source files
 SRCS = $(wildcard $(SRC_DIR)/*.c)
