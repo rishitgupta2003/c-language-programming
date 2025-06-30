@@ -8,4 +8,6 @@ add_executable(IntC
         Practice/other.h
         Practice/main.c
         Practice/listnode.h
-        Practice/listnode.c)
+        Practice/listnode.c
+        Practice/display.c
+        AdvanceDataType/main.c)

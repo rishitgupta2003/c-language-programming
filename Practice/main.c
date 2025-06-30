@@ -24,7 +24,11 @@
 // void printEveryVar(float fV, int rV) {
 //     printf("static double dVar = %lf\nfloat fVar = %f\nstatic float fVar1 = %f\nregister int rVar = %d\n", dVar, fVar, fV, rV);
 // }
-
+int a = 0;
+extern void display();
 int main(void) {
-
+    for (int i = 1; i <= 5; i++) {
+        ++a;
+        display();
+    }
 }

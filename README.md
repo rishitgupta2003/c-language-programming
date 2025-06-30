@@ -5,6 +5,10 @@
 ~~~
 1. Header Files
 2. Storage Classes
+3. Advance Data Types
 ~~~
 
 ...and many more to come as I understand them and do practice of those topics.
+Note: If want to run change:
+    SRC_DIR
+    in Makefile

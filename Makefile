@@ -5,7 +5,8 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
 
 # Directories
-SRC_DIR = Practice
+#SRC_DIR = Practice
+SRC_DIR = AdvanceDataType
 OBJ_DIR = build
 BIN = run.o
 
