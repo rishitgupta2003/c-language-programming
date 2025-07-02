@@ -7,6 +7,7 @@
 2. Storage Classes
 3. Advance Data Types
 4. Bit Manipulation
+5. AdvanceControlFlow
 ~~~
 
 ...and many more to come as I understand them and do practice of those topics.

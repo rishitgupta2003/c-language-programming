@@ -12,4 +12,5 @@ add_executable(IntC
         Practice/display.c
         AdvanceDataType/main.c
         BitManipulation/main.c
-        BitManipulation/variable.c)
+        BitManipulation/variable.c
+        AdvanceControlFlow/setlongjmp.c)

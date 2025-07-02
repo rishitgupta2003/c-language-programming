@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -std=c11
 
 # Directories
 #SRC_DIR = Practice
-SRC_DIR = BitManipulation
+SRC_DIR = AdvanceControlFlow
 OBJ_DIR = build
 BIN = run.o
 
