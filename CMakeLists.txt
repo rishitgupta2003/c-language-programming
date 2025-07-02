@@ -10,4 +10,6 @@ add_executable(IntC
         Practice/listnode.h
         Practice/listnode.c
         Practice/display.c
-        AdvanceDataType/main.c)
+        AdvanceDataType/main.c
+        BitManipulation/main.c
+        BitManipulation/variable.c)
