@@ -9,6 +9,7 @@
 4. Bit Manipulation
 5. Advance Control Flow
 6. Advance Function Concepts
+7. Unions
 ~~~
 
 ...and many more to come as I understand them and do practice of those topics.

@@ -14,4 +14,5 @@ add_executable(IntC
         BitManipulation/main.c
         BitManipulation/variable.c
         AdvanceControlFlow/setlongjmp.c
-        AdvanceFunctionalConcepts/variadic_functions.c)
+        AdvanceFunctionalConcepts/variadic_functions.c
+        Union/unions.c)
