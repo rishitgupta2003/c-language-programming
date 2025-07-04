@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -std=c11
 
 # Directories
 #SRC_DIR = Practice
-SRC_DIR = Union
+SRC_DIR = Macro
 OBJ_DIR = build
 BIN = run.o
 
