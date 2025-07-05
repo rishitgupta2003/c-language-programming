@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -std=c11
 
 # Directories
 #SRC_DIR = Practice
-SRC_DIR = Macro
+SRC_DIR = AdvancePointers
 OBJ_DIR = build
 BIN = run.o
 

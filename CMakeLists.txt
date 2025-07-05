@@ -16,4 +16,6 @@ add_executable(IntC
         AdvanceControlFlow/setlongjmp.c
         AdvanceFunctionalConcepts/variadic_functions.c
         Union/unions.c
-        Macro/macro.c)
+        Macro/macro.c
+        AdvancePointers/advpointers.c
+        AdvancePointers/functionpointers.c)

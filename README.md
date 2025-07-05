@@ -11,6 +11,7 @@
 6. Advance Function Concepts
 7. Unions
 8. Macros
+9. Advance Pointers
 ~~~
 
 ...and many more to come as I understand them and do practice of those topics.
