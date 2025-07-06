@@ -19,4 +19,6 @@ add_executable(IntC
         Macro/macro.c
         AdvancePointers/advpointers.c
         AdvancePointers/functionpointers.c
-        IPC/main.c)
+        IPC/main.c
+        IPC/simple_multiplication_game.c
+        IPC/child_parent.c)

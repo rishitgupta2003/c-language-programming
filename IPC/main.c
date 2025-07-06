@@ -8,14 +8,14 @@
 #include<signal.h>
 
 void handler_dividebyzero(int signum);
-void handler_alarm(int signum);
+void handler_alarms(int signum);
 
 //Comment out the code which is not needed to run each SIGNAL properly.
 //Need to explore sigaction
 
 int main(int argc, char* argv[]) {
     signal(SIGFPE, handler_dividebyzero); //Handling Divide by 0
-    signal(SIGALRM, handler_alarm); //Handling Alarm so program doesn't terminate
+    signal(SIGALRM, handler_alarms); //Handling Alarm so program doesn't terminate
 
     // fork();
     printf("pid: %d\n", getpid());
@@ -60,7 +60,7 @@ void handler_dividebyzero(int signum) {
     printf("Received: %d", signum);
 }
 
-void handler_alarm(int signum) {
+void handler_alarms(int signum) {
     if (signum == SIGALRM) {
         printf("Alarm Caught [SIG value: %d]\n", signum);
     }
