@@ -18,4 +18,5 @@ add_executable(IntC
         Union/unions.c
         Macro/macro.c
         AdvancePointers/advpointers.c
-        AdvancePointers/functionpointers.c)
+        AdvancePointers/functionpointers.c
+        IPC/main.c)
