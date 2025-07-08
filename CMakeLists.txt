@@ -21,4 +21,5 @@ add_executable(IntC
         AdvancePointers/functionpointers.c
         IPC/main.c
         IPC/simple_multiplication_game.c
-        IPC/child_parent.c)
+        IPC/child_parent.c
+        Threads/main.c)

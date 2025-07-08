@@ -2,11 +2,11 @@
 CC = gcc
 
 # Compiler flags
-CFLAGS = -Wall -Wextra -std=c11
+CFLAGS = -Wall -Wextra -std=c11 -lpthread
 
 # Directories
 #SRC_DIR = Practice
-SRC_DIR = IPC
+SRC_DIR = Threads
 OBJ_DIR = build
 BIN = run.o
 
