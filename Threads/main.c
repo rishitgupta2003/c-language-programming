@@ -28,6 +28,7 @@ int shared_variable = 0;
 void* threadHello(void* arg);
 void* final_amount(void* arg);
 void* check_for_race(void* arg);
+void* thread_detach(void* arg);
 
 int main(int argc, char* argv[]) {
     // pthread_t thread;
@@ -48,19 +49,28 @@ int main(int argc, char* argv[]) {
     // free(data);
     // pthread_exit(NULL);
 
+    // pthread_t thread;
+    // pthread_t thread2;
+    // pthread_t thread3;
+    //
+    // pthread_create(&thread, NULL, check_for_race, NULL);
+    // pthread_create(&thread2, NULL, check_for_race, NULL);
+    // pthread_create(&thread3, NULL, check_for_race, NULL);
+    //
+    // pthread_join(thread, NULL);
+    // pthread_join(thread2, NULL);
+    // pthread_join(thread3, NULL);
+    //
+    // printf("Final Value of shared Value: %d\n", shared_variable);
+
+    printf("Main Start\n");
     pthread_t thread;
-    pthread_t thread2;
-    pthread_t thread3;
-
-    pthread_create(&thread, NULL, check_for_race, NULL);
-    pthread_create(&thread2, NULL, check_for_race, NULL);
-    pthread_create(&thread3, NULL, check_for_race, NULL);
-
-    pthread_join(thread, NULL);
-    pthread_join(thread2, NULL);
-    pthread_join(thread3, NULL);
-
-    printf("Final Value of shared Value: %d\n", shared_variable);
+    pthread_create(&thread, NULL, thread_detach, NULL);
+    pthread_detach(thread);
+    // sleep(1);
+    printf("Main Exiting\n");
+    pthread_exit(NULL);
+    // return 0;
 }
 
 void* threadHello(void* arg) {
@@ -85,5 +95,12 @@ void * check_for_race(void *arg) {
         printf("Shared Variable: %d\n", shared_variable);
     }
 
+    return NULL;
+}
+
+void * thread_detach(void *arg) {
+    printf("Thread:%lu Started\n", pthread_self());
+    sleep(2);
+    printf("Thread:%lu Exited\n", pthread_self());
     return NULL;
 }
