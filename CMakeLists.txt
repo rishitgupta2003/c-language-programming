@@ -22,4 +22,8 @@ add_executable(IntC
         IPC/main.c
         IPC/simple_multiplication_game.c
         IPC/child_parent.c
-        Threads/main.c)
+        Threads/main.c
+        try.c
+        Threads/mutex.c
+        Threads/deadlock.c
+        Threads/avoid_deadlock.c)
