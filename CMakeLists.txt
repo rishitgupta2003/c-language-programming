@@ -26,4 +26,8 @@ add_executable(IntC
         try.c
         Threads/mutex.c
         Threads/deadlock.c
-        Threads/avoid_deadlock.c)
+        Threads/avoid_deadlock.c
+        ProducerConsumerProblem/buffer.c
+        ProducerConsumerProblem/producer.c
+        ProducerConsumerProblem/consumer.c
+        ProducerConsumerProblem/main.c)

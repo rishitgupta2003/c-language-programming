@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -std=c11 -lpthread
 
 # Directories
 #SRC_DIR = Practice
-SRC_DIR = Threads
+SRC_DIR = ProducerConsumerProblem
 OBJ_DIR = build
 BIN = run.o
 
